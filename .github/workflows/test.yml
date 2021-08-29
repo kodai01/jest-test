@@ -1,0 +1,16 @@
+name: Jest Test
+
+on: push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js v12.9.0
+      uses: actions/setup-node@v1
+      with:
+        node-version: '12.9.0'
+    - run: yarn install
+    - run: yarn run test
