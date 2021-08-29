@@ -1,5 +1,5 @@
 // テスト対象のコードファイルを取り込む
-const myModule = require('./first');
+const myModule = require('../example/first');
 
 // const sum = myModule.sum
 // const hoge = myModule.hoge

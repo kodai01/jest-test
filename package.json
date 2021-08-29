@@ -5,9 +5,6 @@
   "main": "app.js",
   "scripts": {
     "test": "jest",
-    "test1": "jest app.test.js",
-    "test2": "jest example/first.test.js",
-    "test3": "jest example/object.test.js",
     "console": "node --experimental-modules example/usenode.js"
   },
   "author": "",
