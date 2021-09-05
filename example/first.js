@@ -1,7 +1,7 @@
 // √x^2 + y ^ 2 の値を返す関数を作る
 // 関数と宣言：https://jsprimer.net/basic/function-declaration/
 const pythagoras = (x, y) => {
-  return Math.sqrt(x ** 2 + y ** 2 )
+  return Math.sqrt(x / 3 + y / 4 + 3)
 }
 
 // yearという名前の関数を作り、引数に入れた数字の年が閏年か判定する。
