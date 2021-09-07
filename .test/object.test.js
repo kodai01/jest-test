@@ -1,5 +1,5 @@
 // テスト対象のコードファイルを取り込む
-const myModule = require('./object');
+const myModule = require('../example/object');
 const {array, arrayTwoIndex, obj, baz} = myModule
 
 test ('4つとも定義されています。', () => {

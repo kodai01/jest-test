@@ -6,8 +6,8 @@
   "scripts": {
     "test": "jest",
     "test1": "jest app.test.js",
-    "test2": "jest example/first.test.js",
-    "test3": "jest example/object.test.js",
+    "test2": "jest .test/first.test.js",
+    "test3": "jest .test/object.test.js",
     "console": "node --experimental-modules example/usenode.js"
   },
   "author": "",

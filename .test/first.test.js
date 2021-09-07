@@ -1,14 +1,25 @@
-const hoge = () => {
   // テスト対象のコードファイルを取り込む
   const myModule = require('../example/first');
   
   // const sum = myModule.sum
   // const hoge = myModule.hoge
-  const {year, pythagoras, useFor, useForEach} = myModule
+  const {year, pythagoras, useFor, useForEach, q1, q2, q3} = myModule
   
-  test ('yearとpythagorasが定義されています。', () => {
+  test('yearとpythagorasが定義されています。', () => {
     expect(year).toBeDefined()
     expect(pythagoras).toBeDefined()
+  })
+  
+  test('q1', () => {
+    expect(q1).toBe("const")
+  })
+
+  test('q2', () => {
+    expect(q2).toBe("let")
+  })
+
+  test('q3', () => {
+    expect(q3).toBe("var")
   })
   
   // test内に試験の概要を記載することができます。
@@ -40,6 +51,3 @@ const hoge = () => {
     expect(useForEach(["html", "css", "javascript", "react"])).toStrictEqual([4, 3, 10, 5])
     expect(useForEach([""])).toStrictEqual([0])
   })
-}
-
-module.exports = hoge
