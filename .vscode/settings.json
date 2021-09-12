@@ -1,5 +1,8 @@
 {
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
   "files.exclude": {
-    ".est": true
+    ".test": false,
+    "**/*.test.js": false
   }
 }
