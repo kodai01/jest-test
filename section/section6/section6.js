@@ -1,18 +1,18 @@
 const sum = (a, b) => {
   let sum = 0;
-  let min, max
+  let min, max;
   if (a < b) {
     min = a;
     max = b;
   } else {
     min = b;
-    max = a
+    max = a;
   }
 
-  for( let i = min; i <= max; i++) {
-    sum += i
+  for (let i = min; i <= max; i++) {
+    sum += i;
   }
-  return sum
-}
+  return sum;
+};
 
-module.exports = {sum}
+module.exports = { sum };

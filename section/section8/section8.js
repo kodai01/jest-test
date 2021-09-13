@@ -1,12 +1,12 @@
 const firstIndex = (array) => array[0];
 const countArrayLength = (array) => {
   if (!Array.isArray(array)) {
-    return "これは配列ではありません"
+    return "これは配列ではありません";
   }
   if (array.length) {
-    return `この配列は${array.length}個のデータを持っています`
+    return `この配列は${array.length}個のデータを持っています`;
   } else {
-    return "この配列は空配列です"
+    return "この配列は空配列です";
   }
 };
 

@@ -1,12 +1,12 @@
-q1 = 2
+q1 = 2;
 
-q2 = 5
+q2 = 5;
 
-q3 = 4
+q3 = 4;
 
-q4 = 1
+q4 = 1;
 
-q5 = 6
+q5 = 6;
 /*
 選択肢
 1. 配列
@@ -18,13 +18,13 @@ q5 = 6
 7. undefined
 */
 
-q6 = "!"
+q6 = "!";
 
-q7 = "%"
+q7 = "%";
 
-q8 = false
+q8 = false;
 
-q9 = true
+q9 = true;
 
-q10 = true
-module.exports = {q1, q2, q3, q4, q5, q6, q7, q8, q9, q10}
+q10 = true;
+module.exports = { q1, q2, q3, q4, q5, q6, q7, q8, q9, q10 };

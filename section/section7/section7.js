@@ -9,8 +9,8 @@ const addMP = (value) => {
 };
 
 const updateHP = () => {
-  const updatedCharacter = character.hp -= 15
-  return {...character, hp: updatedCharacter}
+  const updatedCharacter = (character.hp -= 15);
+  return { ...character, hp: updatedCharacter };
 };
 
 const LookUpName = () => {

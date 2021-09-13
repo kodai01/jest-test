@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "jest --passWithNoTests --noStackTrace",
+    "test": "jest --noStackTrace",
     "test1": "jest --noStackTrace ./.test/section1.test.js",
     "test3": "jest --noStackTrace ./.test/section3.test.js",
     "test4": "jest --noStackTrace ./.test/section4.test.js",
@@ -12,12 +12,15 @@
     "test6": "jest --noStackTrace ./.test/section6.test.js",
     "test7": "jest --noStackTrace ./.test/section7.test.js",
     "test8": "jest --noStackTrace ./.test/section8.test.js",
+    "test9": "jest --noStackTrace --silent=false ./.test/section9.test.js",
     "debug4": "node ./section/section6/section4.js",
     "debug5": "node ./section/section6/section5.js",
     "debug6": "node ./section/section6/section6.js",
     "debug7": "node ./section/section7/section7.js",
     "debug8": "node ./section/section8/section8.js",
-    "start": "node section/sample/app.js"
+    "debug9": "node ./section/section9/section9.js",
+    "start": "node section/sample/app.js",
+    "format": "prettier --write './section/**/*.js'"
   },
   "author": "",
   "license": "ISC",
@@ -26,5 +29,9 @@
     "jest": "^27.0.6",
     "node-fetch": "^2.6.1",
     "prettier": "^2.4.0"
+  },
+  "prettier": {
+    "singleQuote": false,
+    "tabWidth": 2
   }
 }

@@ -1,1 +1,1 @@
-console.log("OKできました")
+console.log("OKできました");
