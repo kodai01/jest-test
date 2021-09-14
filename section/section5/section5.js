@@ -1,5 +1,5 @@
 const score = (n) => {
-  if (n >= 80 && n <= 100) {
+  if (n >= 80 && n <= 99) {
     return "合格";
   } else if (n >= 60 && n < 80) {
     return "追試";
