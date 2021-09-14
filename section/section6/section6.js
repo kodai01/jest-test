@@ -9,7 +9,7 @@ const sum = (a, b) => {
     max = a;
   }
 
-  for (let i = a; i <= b; i++) {
+  for (let i = min; i <= max; i++) {
     sum += i;
   }
   return sum;
