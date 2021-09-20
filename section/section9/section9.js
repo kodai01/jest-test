@@ -18,4 +18,27 @@ const userIdList = (jsonDatas) => {
   return returnUserId;
 };
 
-module.exports = { userIdList };
+const fixData = (jsonDatas) => {
+  const userIds = userIdList(jsonDatas);
+  const array = [];
+
+  for (userId of userIds) {
+    const matchedUserData = jsonDatas.filter(
+      (jsonData) => jsonData.userId === userId
+    );
+    for (eachMatchedUserData of matchedUserData) {
+      delete eachMatchedUserData.userId;
+    }
+    array.push(matchedUserData);
+  }
+
+  const newDatas = userIds.map((id, index) => {
+    return {
+      userId: id,
+      datas: array[index],
+    };
+  });
+  return newDatas;
+};
+
+module.exports = { userIdList, fixData };
