@@ -1,5 +1,5 @@
 const userIdList = (jsonDatas) => {
-  let returnUserId = [];
+  const returnUserId = [];
 
   const allUserIds = jsonDatas.map((jsonData) => {
     return jsonData.userId;
