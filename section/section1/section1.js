@@ -4,8 +4,8 @@ q2 = "var";
 
 q3 = `
 
-let country = 1;
-country = 2;
+let country = "Japan";
+country = "America";
 
 `;
 

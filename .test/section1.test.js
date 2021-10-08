@@ -2,29 +2,29 @@
 const section1 = require("../section/section1/section1");
 const { q1, q2, q3, q4, q5, q6 } = section1;
 
-test("q1は正解したか？。", () => {
+test("Whether your q1 answer is right.", () => {
   expect(q1).toBeCustomMessage("//");
 });
 
-test("q2は正解したか？", () => {
+test("Whether your q2 answer is right.", () => {
   expect(q2).toBeCustomMessage("var");
 });
 
-test("q3は正解したか？", () => {
-  expect(q3).toRegCustomMessage("let country = 1;country = 2");
+test("Whether your q3 answer is right.", () => {
+  expect(q3).toRegCustomMessage('let country = "Japan"country = "America"');
 });
 
-test("q4は正解したか？", () => {
+test("Whether your q4 answer is right.", () => {
   expect(q4).toRegCustomMessage(
-    'const japan = {id: 1,capital: "東京"};japan.lang = "日本語"'
+    'const japan = {id: 1,capital: "東京"}japan.lang = "日本語"'
   );
 });
 
-test("q5は正解したか？", () => {
+test("Whether your q5 answer is right.", () => {
   expect(q5).toMultipleCustomMessage([2, 5, 6]);
 });
 
-test("q6は正解したか？", () => {
+test("Whether your q6 answer is right.", () => {
   expect(q6).toBeCustomMessage("キャメルケース");
 });
 
@@ -34,37 +34,45 @@ expect.extend({
       return { pass: true };
     } else {
       return {
-        message: () => "不正解です。間違えた問題をやり直してください",
+        message: () => "You have a mistake. Please fix your answer.",
         pass: false,
       };
     }
   },
 
   toRegCustomMessage(received, argument) {
-    const fixedReceived = received.replace(/\r?\n/g, "").replace(/ {2,}/g, "");
+    const fixedReceived = received
+      .replace(/\r?\n/g, "")
+      .replace(/ {2,}/g, "")
+      .replace(/\;/g, "");
     if (fixedReceived.match("var")) {
       return {
-        message: () => "varって使えるかな？",
+        message: () => 'Can you use "var"?',
+        pass: false,
+      };
+    } else if (fixedReceived.match('capital: "東京",')) {
+      return {
+        message: () => "Please omit ,",
         pass: false,
       };
     } else if (fixedReceived.match(argument)) {
       return { pass: true };
     } else {
       return {
-        message: () => "不正解です。タイプミスや、文法ミスはありませんか？",
+        message: () => "You have a mistake. Please fix your answer.",
         pass: false,
       };
     }
   },
   toMultipleCustomMessage(received, argument) {
-    const fixedReceived = received.sort()
+    const fixedReceived = received.sort();
     if (JSON.stringify(fixedReceived) === JSON.stringify(argument)) {
       return { pass: true };
     } else {
       return {
-        message: () => "不正解です。選び直してください",
+        message: () => "You have a mistake. Please fix your answer.",
         pass: false,
       };
     }
-  }
+  },
 });

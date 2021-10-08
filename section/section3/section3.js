@@ -27,4 +27,9 @@ q8 = false;
 q9 = true;
 
 q10 = true;
-module.exports = { q1, q2, q3, q4, q5, q6, q7, q8, q9, q10 };
+
+q11 = false;
+
+q12 = false;
+
+module.exports = { q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12 };

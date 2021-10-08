@@ -1,5 +1,7 @@
 # 出題範囲
+
 データの型、演算子、型について
+
 - [データ型とリテラル](https://jsprimer.net/basic/data-type/)
 - [演算子](https://jsprimer.net/basic/operator/)
 - [暗黙的な型変換](https://jsprimer.net/basic/implicit-coercion/)
@@ -15,6 +17,7 @@
 - q5: `{id: 1, name: "hogehoge"}`の型は？選択肢から番号で選んでください。
 
 選択肢
+
 1. 配列
 2. 真偽値
 3. null
@@ -32,3 +35,7 @@
 - q9: `1 == "1"`は`true`か`false`か？
 
 - q10: `undefined == null`は`true`か`false`か？
+
+- q11: `[] === []`は`true`か`false`か？(教材には直接書かれてませんが、論理的に考えればわかります)
+
+- q12: `[] == []`は`true`か`false`か？(同上)
