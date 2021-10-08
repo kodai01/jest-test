@@ -10,5 +10,3 @@ const reply = (message = "返信なし") => {
 };
 
 module.exports = { echoDiv, reply };
-
-const ae = "sss";
